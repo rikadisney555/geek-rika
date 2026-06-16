@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        ディズニー診断
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            ディズニー診断
+        </h1>
+
+        <form action="/question_detail" method="POST">
+
+            <h3>
+                ランド？シー？
+            </h3>
+
+            <select name="park" required>
+
+                <option value="land">
+                    ランド
+                </option>
+
+                <option value="sea">
+                    シー
+                </option>
+
+            </select>
+
+    <br><br>
+
+    <button type="submit">
+        次へ
+    </button>
+
+</form>
+
+
+    </div>
+
+</body>
+
+</html>

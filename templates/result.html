@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        診断結果
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            診断結果
+        </h1>
+
+        <h2>
+            あなたは…
+        </h2>
+
+        <h1>
+            {{ result_type }}
+        </h1>
+
+        <p>
+            {{ description }}
+        </p>
+
+        <hr>
+
+        <h2>
+            おすすめアトラクション
+        </h2>
+
+        <ul>
+
+            {% for attraction in attractions %}
+
+                <li>
+
+                    {{ attraction }}
+
+                    <a
+                        href="{{ attraction_urls.get(attraction, '#') }}"
+                        target="_blank">
+
+                        ▶ 詳細（公式サイト）
+
+                    </a>
+
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+        <hr>
+
+        <h2>
+            おすすめフード
+        </h2>
+
+        <p>
+            {{ food }}
+        </p>
+
+        <hr>
+        <h2>
+             🍽 おすすめレストラン
+        </h2>
+
+        <div class="restaurant-card">
+
+            <h3>
+                <a
+                        href="{{ restaurant_urls.get(restaurant['name'], '#') }}"
+                         target="_blank">
+
+                         ▶ 公式サイト
+                </a>
+                {{ restaurant["name"] }}
+            </h3>
+
+            <p>
+                 <strong>雰囲気：</strong>
+                {{ restaurant["mood"] }}
+            </p>
+
+            <p>
+                <strong>おすすめメニュー：</strong>
+                 {{ restaurant["menu"] }}
+            </p>
+
+            <p>
+                <strong>おすすめポイント：</strong>
+                {{ restaurant["recommend"] }}
+            </p>
+
+        </div>
+
+        <hr>
+
+        <h2>
+            おすすめの回り方
+        </h2>
+
+        <p>
+            {{ strategy }}
+        </p>
+
+        <br>
+
+        <hr>
+
+        <h2>
+            現在のおすすめ
+        </h2>
+
+ <p>
+    {{ time_message }}
+</p>
+
+<hr>
+
+<h2>
+    今日のおすすめ攻略順
+</h2>
+
+<ol>
+
+    {% for ride in recommended_order %}
+
+        <li>
+
+            {{ ride["name"] }}
+
+            （待ち時間 {{ ride["wait"] }}分）
+
+        </li>
+
+    {% endfor %}
+
+</ol>
+    <hr>
+
+    <h2>
+        マップで確認
+    </h2>
+
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <hr>
+
+    <a href="/question">
+
+        <button>
+        もう一度診断する
+        </button>
+
+    </a>
+
+</div>
+
+<script>
+    function initMap() {
+
+        const rides = JSON.parse('{{ recommended_order | tojson | safe }}');
+
+        const map = new google.maps.Map(
+            document.getElementById("map"),
+            {
+                zoom: 16,
+                center: {
+                    lat: 35.6267,
+                    lng: 139.8851
+                }
+            }
+        );
+
+        const geocoder = new google.maps.Geocoder();
+
+        rides.forEach((ride, index) => {
+
+            const searchName = ride.name + " 東京ディズニーリゾート";
+
+            geocoder.geocode(
+                {
+                    address: searchName
+                },
+                function(results, status) {
+
+                    if (status === "OK") {
+
+                        new google.maps.Marker({
+                            position: results[0].geometry.location,
+                            map: map,
+                            label: String(index + 1),
+                            title: ride.name
+                        });
+
+                    } else {
+
+                        console.log(
+                            ride.name + " の位置取得に失敗しました: " + status
+                        );
+
+                    }
+                }
+            );
+        });
+    }
+</script>
+
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKZVVsXZUQwKeyVcsgVFa94zQ8pubCMC8&callback=initMap">
+</script>
+
+</body>
+
+</html>

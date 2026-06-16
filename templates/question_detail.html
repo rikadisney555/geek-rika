@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>診断ページ</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>ディズニー診断</h1>
+
+    <form action="/result" method="POST">
+
+        <input type="hidden" name="park" value="{{ park }}">
+
+        <h3>予算は？</h3>
+
+        <input
+            type="number"
+            name="budget"
+            placeholder="例：15000"
+            required>
+
+        <h3>誰と行く？</h3>
+
+        <select name="who" required>
+            <option value="couple">カップル</option>
+            <option value="friend">友達</option>
+            <option value="family">家族</option>
+            <option value="solo">一人</option>
+        </select>
+
+        <h3>何を重視？</h3>
+
+        <select name="priority" required>
+            <option value="thrill">絶叫アトラクション</option>
+            <option value="food">食べ歩き</option>
+            <option value="photo">写真・映え</option>
+            <option value="show">ショー・パレード</option>
+            <option value="relax">雰囲気・まったり</option>
+        </select>
+
+        <hr>
+
+        <h2>今日乗りたいアトラクション</h2>
+
+        <h3>アトラクション①</h3>
+
+        <select name="ride1" required>
+            {% for attraction in attractions %}
+                <option value="{{ attraction }}">
+                    {{ attraction }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <input
+            type="number"
+            name="wait1"
+            placeholder="待ち時間（分）"
+            required>
+
+        <h3>アトラクション②</h3>
+
+        <select name="ride2" required>
+            {% for attraction in attractions %}
+                <option value="{{ attraction }}">
+                    {{ attraction }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <input
+            type="number"
+            name="wait2"
+            placeholder="待ち時間（分）"
+            required>
+
+        <h3>アトラクション③</h3>
+
+        <select name="ride3" required>
+            {% for attraction in attractions %}
+                <option value="{{ attraction }}">
+                    {{ attraction }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <input
+            type="number"
+            name="wait3"
+            placeholder="待ち時間（分）"
+            required>
+
+        <br><br>
+
+        <button type="submit">
+            診断する
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
