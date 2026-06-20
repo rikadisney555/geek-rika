@@ -15,52 +15,63 @@
 </head>
 
 <body>
+<div class="result-container">
+    <h1 class="result-page-title">
+        診断結果
+    </h1>
 
-    <div class="container">
+<div class="result-hero {{ hero_class }}">
 
-        <h1>
-            診断結果
-        </h1>
+    <p class="result-label">
+        あなたは…
+    </p>
 
-        <h2>
-            あなたは…
-        </h2>
+    <img
+        src="{{ url_for('static', filename=type_icon) }}"
+        class="result-type-icon">
 
-        <h1>
-            {{ result_type }}
-        </h1>
+    <h1 class="result-type">
+        {{ result_type }}
+    </h1>
 
-        <p>
-            {{ description }}
-        </p>
+    <p class="result-description">
+        {{ description }}
+    </p>
 
-        <hr>
+</div>
 
-        <h2>
+    <div class="result-section">
+
+        <h2 class="result-section-title">
             おすすめアトラクション
         </h2>
 
-        <ul>
+        <div class="attraction-list">
 
             {% for attraction in attractions %}
 
-                <li>
+                <div class="attraction-card">
 
-                    {{ attraction }}
+                    <h3>
+                        {{ attraction }}
+                    </h3>
 
                     <a
                         href="{{ attraction_urls.get(attraction, '#') }}"
-                        target="_blank">
+                        target="_blank"
+                        class="official-link">
 
-                        ▶ 詳細（公式サイト）
+                        ▶ 公式サイトを見る
 
                     </a>
 
-                </li>
+                </div>
 
             {% endfor %}
 
-        </ul>
+        </div>
+
+    </div>
 
         <hr>
 
@@ -74,35 +85,57 @@
 
         <hr>
         <h2>
-             🍽 おすすめレストラン
+            おすすめレストラン
         </h2>
 
         <div class="restaurant-card">
+            
+            <p class="restaurant-subtitle">
+                Recommended Restaurant
+            </p>
 
-            <h3>
-                <a
-                        href="{{ restaurant_urls.get(restaurant['name'], '#') }}"
-                         target="_blank">
-
-                         ▶ 公式サイト
-                </a>
+            <h3 class="restaurant-name">
                 {{ restaurant["name"] }}
             </h3>
 
-            <p>
-                 <strong>雰囲気：</strong>
+            <div class="restaurant-label">
+
+                雰囲気
+
+            </div>
+
+            <a
+                href="{{ restaurant_urls.get(restaurant['name'], '#') }}"
+                target="_blank"
+                class="official-link">
+
+                ▶ 公式サイトを見る
+
+            </a>
+
+            <p class="restaurant-text">
                 {{ restaurant["mood"] }}
             </p>
 
-            <p>
-                <strong>おすすめメニュー：</strong>
-                 {{ restaurant["menu"] }}
+            <div class="restaurant-label">
+
+                おすすめメニュー
+
+            </div>
+
+            <p class="restaurant-text">
+                {{ restaurant["menu"] }}
             </p>
 
+            <div class="restaurant-label">
+
+                おすすめポイント
+
+            </div>
+
             <p>
-                <strong>おすすめポイント：</strong>
                 {{ restaurant["recommend"] }}
-            </p>
+            </p>           
 
         </div>
 
@@ -124,48 +157,130 @@
             現在のおすすめ
         </h2>
 
- <p>
-    {{ time_message }}
-</p>
+    <p>
+        {{ time_message }}
+    </p>
 
-<hr>
+    <hr>
 
-<h2>
-    今日のおすすめ攻略順
-</h2>
+    <div class="result-section">
 
-<ol>
+        <div class="section-title">
+
+            今日のおすすめ攻略順
+
+        </div>
+
+    <div class="ride-order">
 
     {% for ride in recommended_order %}
 
-        <li>
+        <div class="ride-card">
 
-            {{ ride["name"] }}
+            <div class="ride-stop">
 
-            （待ち時間 {{ ride["wait"] }}分）
+                {% if loop.index == 1 %}
+                1st Stop
+                {% elif loop.index == 2 %}
+                    2nd Stop
+                {% elif loop.index == 3 %}
+                    3rd Stop
+                {% else %}
+                    {{ loop.index }}th Stop
+                {% endif %}
 
-        </li>
+            </div>
+
+            <h3>
+
+                {{ ride["name"] }}
+
+            </h3>
+
+            <p>
+
+                待ち時間 {{ ride["wait"] }}分
+
+            </p>
+
+        </div>
 
     {% endfor %}
 
-</ol>
-    <hr>
+    </div>
 
-    <h2>
-        マップで確認
-    </h2>
+    <div class="route-map-card">
 
-    <div id="map" style="width: 100%; height: 400px;"></div>
+    <div class="route-map-header">
 
-    <hr>
+        <p class="route-map-subtitle">
+            Today's Route Map
+        </p>
 
-    <a href="/question">
+        <h2>
+            📍 アトラクションの位置を確認 📍
+        </h2>
 
-        <button>
-        もう一度診断する
-        </button>
+    </div>
 
-    </a>
+    <div class="route-stop-list">
+
+        {% for ride in recommended_order %}
+
+            <div class="route-stop-card">
+
+                <div class="stop-badge">
+
+                    {% if loop.index == 1 %}
+                        1st<br>STOP
+                    {% elif loop.index == 2 %}
+                        2nd<br>STOP
+                    {% elif loop.index == 3 %}
+                        3rd<br>STOP
+                    {% else %}
+                        {{ loop.index }}th<br>STOP
+                    {% endif %}
+
+                </div>
+
+                <div class="stop-info">
+
+                    <h3>
+                        {{ ride["name"] }}
+                    </h3>
+
+                    <p>
+                        待ち時間 {{ ride["wait"] }}分
+                    </p>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="map-wrapper">
+
+        <div id="map"></div>
+
+    </div>
+
+    <p class="map-note">
+        ピンをタップすると、各アトラクションの詳細を確認できます。
+    </p>
+
+</div>
+        <hr>
+
+        <a href="/question">
+
+            <button>
+            もう一度診断する
+            </button>
+
+        </a>
 
 </div>
 
@@ -220,8 +335,24 @@
 </script>
 
 <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKZVVsXZUQwKeyVcsgVFa94zQ8pubCMC8&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBUh3ZYNlhGAVuoMgNr35iQei4hWGSiDI&callback=initMap">
 </script>
+
+<div id="result-popup">
+
+    <div class="popup-content">
+
+        <p>
+            あなたは…
+        </p>
+
+        <h1>
+            {{ result_type }}
+        </h1>
+
+    </div>
+
+</div>
 
 </body>
 

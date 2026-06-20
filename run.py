@@ -664,55 +664,55 @@ ATTRACTION_URLS = {
     # =====================
 
     "美女と野獣“魔法のものがたり”":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/201/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/197/",
 
     "ベイマックスのハッピーライド":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/200/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/196/",
 
     "プーさんのハニーハント":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/166/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/174/",
 
     "ビッグサンダー・マウンテン":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/157/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/160/",
 
     "スプラッシュ・マウンテン":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/178/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/162/",
 
     "モンスターズ・インク“ライド＆ゴーシーク！”":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/185/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/189/",
 
     "ホーンテッドマンション":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/168/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/171/",
 
     "スター・ツアーズ：ザ・アドベンチャーズ・コンティニュー":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/194/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/183/",
 
     "ジャングルクルーズ：ワイルドライフ・エクスペディション":
     "https://www.tokyodisneyresort.jp/tdl/attraction/detail/153/",
 
     "ウエスタンリバー鉄道":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/151/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/154/",
 
     "カリブの海賊":
     "https://www.tokyodisneyresort.jp/tdl/attraction/detail/152/",
 
     "イッツ・ア・スモールワールド":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/165/",
-
-    "空飛ぶダンボ":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/171/",
-
-    "ピーターパン空の旅":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/170/",
-
-    "白雪姫と七人のこびと":
     "https://www.tokyodisneyresort.jp/tdl/attraction/detail/172/",
 
-    "ピノキオの冒険旅行":
+    "空飛ぶダンボ":
     "https://www.tokyodisneyresort.jp/tdl/attraction/detail/169/",
 
+    "ピーターパン空の旅":
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/164/",
+
+    "白雪姫と七人のこびと":
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/165/",
+
+    "ピノキオの冒険旅行":
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/168/",
+
     "ガジェットのゴーコースター":
-    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/181/",
+    "https://www.tokyodisneyresort.jp/tdl/attraction/detail/179/",
 
     # =====================
     # 東京ディズニーシー
@@ -722,63 +722,68 @@ ATTRACTION_URLS = {
     "https://www.tokyodisneyresort.jp/tds/attraction/detail/219/",
 
     "タワー・オブ・テラー":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/222/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/243/",
 
     "センター・オブ・ジ・アース":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/208/",
-
-    "レイジングスピリッツ":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/210/",
-
-    "インディ・ジョーンズ®・アドベンチャー：クリスタルスカルの魔宮":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/209/",
-
-    "トイ・ストーリー・マニア！":
     "https://www.tokyodisneyresort.jp/tds/attraction/detail/223/",
 
-    "ニモ＆フレンズ・シーライダー":
+    "レイジングスピリッツ":
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/242/",
+
+    "インディ・ジョーンズ®・アドベンチャー：クリスタルスカルの魔宮":
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/222/",
+
+    "トイ・ストーリー・マニア！":
     "https://www.tokyodisneyresort.jp/tds/attraction/detail/218/",
 
+    "ニモ＆フレンズ・シーライダー":
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/247/",
+
     "タートル・トーク":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/214/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/246/",
 
     "アクアトピア":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/205/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/234/",
 
     "海底2万マイル":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/211/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/224/",
 
     "シンドバッド・ストーリーブック・ヴォヤッジ":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/212/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/235/",
 
     "ジャスミンのフライングカーペット":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/213/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/220/",
 
     "マジックランプシアター":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/215/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/226/",
 
     "ヴェネツィアン・ゴンドラ":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/204/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/230/",
 
     "ディズニーシー・トランジットスチーマーライン":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/203/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/227/",
 
     "アナとエルサのフローズンジャーニー":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/352/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/255/",
 
     "ラプンツェルのランタンフェスティバル":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/353/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/256/",
 
     "ピーターパンのネバーランドアドベンチャー":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/354/",
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/257/",
 
     "フェアリー・ティンカーベルのビジーバギー":
-    "https://www.tokyodisneyresort.jp/tds/attraction/detail/355/"
+    "https://www.tokyodisneyresort.jp/tds/attraction/detail/258/"
 }
 
 RESTAURANT_URLS = {
-    "マゼランズ":
-    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/412/",
+
+    # =====================
+    # 東京ディズニーランド
+    # =====================
+
+    "ブルーバイユー・レストラン":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/318/",
 
     "クイーン・オブ・ハートのバンケットホール":
     "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/349/",
@@ -786,17 +791,147 @@ RESTAURANT_URLS = {
     "プラズマ・レイズ・ダイナー":
     "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/352/",
 
+    "グランマ・サラのキッチン":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/344/",
+
+    "ハングリーベア・レストラン":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/338/",
+
+    "センターストリート・コーヒーハウス":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/306/",
+
+    "れすとらん北齋":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/313/",
+
+    "イーストサイド・カフェ":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/300/",
+
+    "クリスタルパレス・レストラン":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/323/",
+
+    "プラザパビリオン・レストラン":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/335/",
+
+    "キャンプ・ウッドチャック・キッチン":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/339/",
+
+    "ポリネシアンテラス・レストラン":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/326/",
+
+    "リフレッシュメントコーナー":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/303/",
+
+    "トゥモローランド・テラス":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/357/",
+
+    "パン・ギャラクティック・ピザ・ポート":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/353/",
+
+    "ヒューイ・デューイ・ルーイのグッドタイム・カフェ":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/362/",
+
+    "スウィートハート・カフェ":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/316/",
+
+    "ソフトランディング":
+    "https://www.tokyodisneyresort.jp/tdl/restaurant/detail/354/",
+
+
+    # =====================
+    # 東京ディズニーシー
+    # =====================
+
+    "マゼランズ":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/412/",
+
+    "リストランテ・ディ・カナレット":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/408/",
+
+    "S.S.コロンビア・ダイニングルーム":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/425/",
+
+    "テディ・ルーズヴェルト・ラウンジ":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/429/",
+
+    "レストラン櫻":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/421/",
+
+    "ホライズンベイ・レストラン":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/431/",
+
     "カフェ・ポルトフィーノ":
     "https://www.tokyodisneyresort.jp/tds/restaurant/detail/400/",
 
-    "テディ・ルーズヴェルト・ラウンジ":
-    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/423/",
+    "ザンビーニ・ブラザーズ・リストランテ":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/409/",
+
+    "ミゲルズ・エルドラド・キャンティーナ":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/456/",
 
     "ユカタン・ベースキャンプ・グリル":
-    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/426/",
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/459/",
 
     "ドックサイドダイナー":
-    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/418/"
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/441/",
+
+    "ニューヨーク・デリ":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/416/",
+
+    "ヴォルケイニア・レストラン":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/418/",
+
+    "カスバ・フードコート":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/441/",
+
+    "セバスチャンのカリプソキッチン":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/438/",
+
+    "マンマ・ビスコッティーズ・ベーカリー":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/406/",
+
+    "ケープコッド・クックオフ":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/446/",
+
+    "リバティ・ランディング・ダイナー":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/414/",
+
+    "バーナクル・ビルズ":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/415/",
+
+    "ハドソンリバー・ハーベスト":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/413/",
+
+    # ロストリバーデルタ
+
+    "エクスペディション・イート":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/458/",
+
+    # ミステリアスアイランド
+
+    "ノーチラスギャレー":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/443/",
+
+    "リフレスコス":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/444/",
+
+    # メディテレーニアンハーバー
+
+    "ゴンドリエ・スナック":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/404/",
+
+    # ファンタジースプリングス
+
+    "スナグリーダックリング":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/451/",
+
+    "アレンデール・ロイヤルバンケット":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/452/",
+
+    "ルックアウト・クックアウト":
+    "https://www.tokyodisneyresort.jp/tds/restaurant/detail/454/",
+
+    "フードワゴン巡り":
+    "https://www.tokyodisneyresort.jp/tds/food/detail/16613058751/"
 }
 # =====================
 # 診断結果データ
@@ -1276,6 +1411,39 @@ TYPE_BONUS = {
     }
 
 }
+
+TYPE_ICONS = {
+
+    "デート職人": "date.png",
+    "子連れマスター": "family.png",
+    "DPA課金ガチ勢": "dpa.png",
+    "食べ歩き王": "food.png",
+    "ショーオタク": "show.png",
+    "絶叫ジャンキー": "thrill.png",
+    "映えハンター": "photo.png",
+    "パーク散策家": "walk.png"
+
+}
+
+TYPE_COLORS = {
+
+    "デート職人": "date",
+
+    "子連れマスター": "family",
+
+    "DPA課金ガチ勢": "dpa",
+
+    "食べ歩き王": "food",
+
+    "ショーオタク": "show",
+
+    "絶叫ジャンキー": "thrill",
+
+    "映えハンター": "photo",
+
+    "パーク散策家": "walk"
+
+}
 # =====================
 # TOPページ
 # =====================
@@ -1663,7 +1831,12 @@ def result():
         attraction_urls=ATTRACTION_URLS,
         restaurant=recommend_data["restaurant"],
 
-        restaurant_urls=RESTAURANT_URLS
+        restaurant_urls=RESTAURANT_URLS,
+
+        type_icon=TYPE_ICONS[result_type],
+
+        hero_class=TYPE_COLORS[result_type],
+
 
     )
 

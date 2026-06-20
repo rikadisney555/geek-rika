@@ -19,35 +19,73 @@
     <div class="container">
 
         <h1>
-            ディズニー診断
+            ディズニー攻略プラン診断
         </h1>
+
+        <p class="question-step">
+            STEP 1
+        </p>
+
+        <h2 class="question-main">
+            行きたいのはランド？シー？
+        </h2>
+
+        <p class="question-sub">
+            行きたいパークを選んでください
+        </p>
 
         <form action="/question_detail" method="POST">
 
-            <h3>
-                ランド？シー？
-            </h3>
+            <label class="park-card">
+                
+                <div class="park-icon">
+                    <img
+                    src="{{ url_for('static',
+                    filename='castle2.png') }}"
+                    class="park-icon">
+                </div>
 
-            <select name="park" required>
+                <input
+                    type="radio"
+                    name="park"
+                    value="land"
+                    required>
 
-                <option value="land">
-                    ランド
-                </option>
 
-                <option value="sea">
-                    シー
-                </option>
+                <h3>
+                    東京ディズニーランド
+                </h3>
 
-            </select>
+            </label>
 
-    <br><br>
+            <label class="park-card">
 
-    <button type="submit">
-        次へ
-    </button>
+                <input
+                    type="radio"
+                    name="park"
+                    value="sea"
+                    required>
 
-</form>
+                <div class="park-icon">
+                    <img
+                        src="{{ url_for('static',
+                        filename='anchor.png') }}"
+                        class="park-icon">
+                </div>
 
+                <h3>
+                    東京ディズニーシー
+                </h3>
+
+            </label>
+
+            <br>
+
+            <button type="submit" class="main-button">
+                次へ
+            </button>
+
+        </form>
 
     </div>
 

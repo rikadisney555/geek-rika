@@ -13,100 +13,195 @@
 
 <div class="container">
 
-    <h1>ディズニー診断</h1>
+    <h1 class="question-title">
+        ディズニー攻略プラン診断
+    </h1>
 
-    <form action="/result" method="POST">
+    <p class="question-sub">
+        あなたの予定に合わせて、ぴったりの回り方を提案します✨
+    </p>
+
+    <form action="/result" method="POST" id="diagnosis-form">
 
         <input type="hidden" name="park" value="{{ park }}">
 
-        <h3>予算は？</h3>
+        <div class="question-card">
 
-        <input
-            type="number"
-            name="budget"
-            placeholder="例：15000"
-            required>
+            <p class="question-step">
+                STEP 2
+            </p>
 
-        <h3>誰と行く？</h3>
+            <h3>
+                予算は？
+            </h3>
 
-        <select name="who" required>
-            <option value="couple">カップル</option>
-            <option value="friend">友達</option>
-            <option value="family">家族</option>
-            <option value="solo">一人</option>
-        </select>
+            <input
+                type="number"
+                name="budget"
+                placeholder="例：15000"
+                required>
 
-        <h3>何を重視？</h3>
+        </div>
 
-        <select name="priority" required>
-            <option value="thrill">絶叫アトラクション</option>
-            <option value="food">食べ歩き</option>
-            <option value="photo">写真・映え</option>
-            <option value="show">ショー・パレード</option>
-            <option value="relax">雰囲気・まったり</option>
-        </select>
+        <div class="question-card">
 
-        <hr>
+            <p class="question-step">
+                STEP 3
+            </p>
 
-        <h2>今日乗りたいアトラクション</h2>
+            <h3>
+                誰と行く？
+            </h3>
 
-        <h3>アトラクション①</h3>
+            <select name="who" required>
+                <option value="couple">カップル</option>
+                <option value="friend">友達</option>
+                <option value="family">家族</option>
+                <option value="solo">一人</option>
+            </select>
 
-        <select name="ride1" required>
-            {% for attraction in attractions %}
-                <option value="{{ attraction }}">
-                    {{ attraction }}
-                </option>
-            {% endfor %}
-        </select>
+        </div>
 
-        <input
-            type="number"
-            name="wait1"
-            placeholder="待ち時間（分）"
-            required>
+        <div class="question-card">
 
-        <h3>アトラクション②</h3>
+            <p class="question-step">
+                STEP 4
+            </p>
 
-        <select name="ride2" required>
-            {% for attraction in attractions %}
-                <option value="{{ attraction }}">
-                    {{ attraction }}
-                </option>
-            {% endfor %}
-        </select>
+            <h3>
+                何を重視？
+            </h3>
 
-        <input
-            type="number"
-            name="wait2"
-            placeholder="待ち時間（分）"
-            required>
+            <select name="priority" required>
+                <option value="thrill">絶叫アトラクション</option>
+                <option value="food">食べ歩き</option>
+                <option value="photo">写真・映え</option>
+                <option value="show">ショー・パレード</option>
+                <option value="relax">雰囲気・まったり</option>
+            </select>
 
-        <h3>アトラクション③</h3>
+        </div>
 
-        <select name="ride3" required>
-            {% for attraction in attractions %}
-                <option value="{{ attraction }}">
-                    {{ attraction }}
-                </option>
-            {% endfor %}
-        </select>
+        <div class="question-card">
 
-        <input
-            type="number"
-            name="wait3"
-            placeholder="待ち時間（分）"
-            required>
+            <p class="question-step">
+                STEP 5
+            </p>
 
-        <br><br>
+            <h3>
+                今日乗りたいアトラクション
+            </h3>
 
-        <button type="submit">
+            <p class="question-sub">
+                乗りたいものを3つ選んで、今の待ち時間を入力してください
+            </p>
+
+            <div class="ride-block">
+
+                <label>
+                    アトラクション①
+                </label>
+
+                <select name="ride1" required>
+                    {% for attraction in attractions %}
+                        <option value="{{ attraction }}">
+                            {{ attraction }}
+                        </option>
+                    {% endfor %}
+                </select>
+
+                <input
+                    type="number"
+                    name="wait1"
+                    placeholder="待ち時間（分）"
+                    required>
+
+            </div>
+
+            <div class="ride-block">
+
+                <label>
+                    アトラクション②
+                </label>
+
+                <select name="ride2" required>
+                    {% for attraction in attractions %}
+                        <option value="{{ attraction }}">
+                            {{ attraction }}
+                        </option>
+                    {% endfor %}
+                </select>
+
+                <input
+                    type="number"
+                    name="wait2"
+                    placeholder="待ち時間（分）"
+                    required>
+
+            </div>
+
+            <div class="ride-block">
+
+                <label>
+                    アトラクション③
+                </label>
+
+                <select name="ride3" required>
+                    {% for attraction in attractions %}
+                        <option value="{{ attraction }}">
+                            {{ attraction }}
+                        </option>
+                    {% endfor %}
+                </select>
+
+                <input
+                    type="number"
+                    name="wait3"
+                    placeholder="待ち時間（分）"
+                    required>
+
+            </div>
+
+        </div>
+
+        <button type="submit" class="main-button">
             診断する
         </button>
 
     </form>
 
 </div>
+<div id="loading-screen">
+
+    <img
+        src="{{ url_for('static', filename='castle.png') }}"
+        class="loading-logo">
+
+    <p class="loading-title">
+        あなたにぴったりのプランを作成中...
+    </p>
+
+    <div class="loading-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+
+<script>
+    const form = document.getElementById("diagnosis-form");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("loading-screen").style.display = "flex";
+
+        setTimeout(function() {
+            form.submit();
+        }, 1200);
+    });
+</script>
 
 </body>
 
